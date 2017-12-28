@@ -3,10 +3,11 @@ Welcome
 
 Welcome to |classbold| |year|
 
-This guide is intended to supplement the official F5 Application Connector |AskF5 guide| 
+This guide is intended to *supplement* the official F5 Application Connector |AskF5 guide| 
 with screenshots.
 
-The steps in this guide deploys the Service Center component in public cloud.
+.. NOTE::
+The steps in this guide deploys the Service Center component in **Microsoft Azure**.
 While this is not ideal multi-cloud design, it does allow quick deployment of a 
 test environment for Application Connector.
 

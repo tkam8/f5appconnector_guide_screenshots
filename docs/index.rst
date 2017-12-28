@@ -1,4 +1,4 @@
-F5 Application Connector Install Guide with Screenshots
+F5 Application Connector Install Guide with Screenshots (Microsoft Azure)
 ===================================================================================
 
 .. toctree::
