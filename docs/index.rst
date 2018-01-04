@@ -6,5 +6,6 @@ F5 Application Connector Install Guide with Screenshots (Microsoft Azure)
    :caption: Contents:
    :glob:
 
-intro
+intro*
+labinfo*/labinfo*
 module*/module*
