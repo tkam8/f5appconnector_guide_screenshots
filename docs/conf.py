@@ -20,8 +20,88 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# BEGIN CONFIG
+# ------------
+#
+# REQUIRED: Your class/lab name
+classname = "F5 Application Connector Install Guide with Screenshots"
+
+# OPTIONAL: The URL to the GitHub Repository for this class
+github_repo = "https://github.com/tkam8/f5appconnector_guide_screenshots"
+
+# OPTIONAL: Google Analytics
+# googleanalytics_id = 'UA-85156643-4'
+
+#
+# END CONFIG
+# ----------
 
 # -- General configuration ------------------------------------------------
+
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+#
+# import os
+# import sys
+# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+import time
+import re
+import pkgutil
+import string
+sys.path.insert(0, os.path.abspath('.'))
+import f5_sphinx_theme
+
+year = time.strftime("%Y")
+eventname = "F5 WAF Autoscale AWS Guide %s" % (year)
+
+rst_prolog = """
+.. |classname| replace:: %s
+.. |classbold| replace:: **%s**
+.. |classitalic| replace:: *%s*
+.. |ltm| replace:: Local Traffic Manager
+.. |adc| replace:: Application Delivery Controller
+.. |gtm| replace:: Global Traffic Manager
+.. |dns| replace:: DNS
+.. |asm| replace:: Application Security Manager
+.. |afm| replace:: Advanced Firewall Manager
+.. |apm| replace:: Access Policy Manager
+.. |pem| replace:: Policy Enforcement Manager
+.. |ipi| replace:: IP Intelligence
+.. |iwf| replace:: iWorkflow
+.. |biq| replace:: BIG-IQ
+.. |bip| replace:: BIG-IP
+.. |aiq| replace:: APP-IQ
+.. |ve|  replace:: Virtual Edition
+.. |icr| replace:: iControl REST API
+.. |ics| replace:: iControl SOAP API
+.. |f5|  replace:: F5 Networks
+.. |f5i| replace:: F5 Networks, Inc.
+.. |year| replace:: %s
+""" % (classname,
+       classname,
+       classname,
+       year)
+
+if 'github_repo' in locals() and len(github_repo) > 0:
+    rst_prolog += """
+.. |repoinfo| replace:: The content contained here leverages a full DevOps CI/CD
+              pipeline and is sourced from the GitHub repository at %s.
+              Bugs and Requests for enhancements can be made using by
+              opening an Issue within the repository.
+""" % (github_repo)
+else:
+    rst_prolog += """
+.. |repoinfo| replace:: \ \n"
+"""
+
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+on_snops = os.environ.get('SNOPS_ISALIVE', None) == 'True'
+
+print "on_rtd = %s" % on_rtd
+print "on_snops = %s" % on_snops
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
@@ -78,11 +158,23 @@ todo_include_todos = False
 
 
 # -- Options for HTML output ----------------------------------------------
-
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
+html_theme = 'f5_sphinx_theme'
+html_theme_path = f5_sphinx_theme.get_html_theme_path()
+html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html','relations.html']}
+html_theme_options = {
+                        'site_name': 'F5 WAF Autoscale AWS Guide',
+                        'next_prev_link': True
+                     }
+
+def setup(app):
+    app.add_stylesheet('css/f5_agility_theme.css')
+
+if on_rtd:
+    templates_path = ['_templates']
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -107,6 +199,36 @@ html_sidebars = {
     ]
 }
 
+
+# -- Options for HTMLHelp output ------------------------------------------
+
+cleanname = re.sub('\W+','',classname)
+
+# Output file base name for HTML help builder.
+htmlhelp_basename =  cleanname + 'doc'
+
+# -- Options for LaTeX output ---------------------------------------------
+
+latex_engine = 'platex'
+
+front_cover_image = 'front_cover'
+back_cover_image = 'back_cover'
+
+front_cover_image_path = os.path.join('_static', front_cover_image + '.png')
+back_cover_image_path = os.path.join('_static', back_cover_image + '.png')
+
+latex_additional_files = [front_cover_image_path, back_cover_image_path]
+
+template = string.Template(open('preamble.tex').read())
+
+latex_contents = r"""
+\frontcoverpage
+\contentspage
+"""
+
+backcover_latex_contents = r"""
+\backcoverpage
+"""
 
 # -- Options for HTMLHelp output ------------------------------------------
 

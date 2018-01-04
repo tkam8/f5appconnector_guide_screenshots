@@ -2,6 +2,7 @@ Add Virtual Server for application access
 =============================
 
 #. Create a pool that contains the WordPress server created earlier.
+    This node was auto discovered by the Application Connector proxy.
 
 |task-1-1|
 
