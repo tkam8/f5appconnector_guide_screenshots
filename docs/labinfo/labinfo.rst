@@ -2,7 +2,7 @@ Lab Overview
 ===================================================
 
 The below diagram shows the network design and components used in this guide. 
-Configure your 
+Configure your lab similarly.
 
    |components|
 
