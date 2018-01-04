@@ -1,4 +1,4 @@
-Module 1: Configure Azure Cloud Environment
+Module 3: Configure Backend WordPress Servers
 ====================================================
 
 
