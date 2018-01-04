@@ -55,7 +55,7 @@ sys.path.insert(0, os.path.abspath('.'))
 import f5_sphinx_theme
 
 year = time.strftime("%Y")
-eventname = "F5 WAF Autoscale AWS Guide %s" % (year)
+eventname = "F5 Application Connector Install Guide with Screenshots %s" % (year)
 
 rst_prolog = """
 .. |classname| replace:: %s
@@ -166,7 +166,7 @@ html_theme = 'f5_sphinx_theme'
 html_theme_path = f5_sphinx_theme.get_html_theme_path()
 html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html','relations.html']}
 html_theme_options = {
-                        'site_name': 'F5 WAF Autoscale AWS Guide',
+                        'site_name': 'F5 Application Connector Install Guide with Screenshots',
                         'next_prev_link': True
                      }
 
