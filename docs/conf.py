@@ -29,6 +29,9 @@ classname = "F5 Application Connector Install Guide with Screenshots"
 # OPTIONAL: The URL to the GitHub Repository for this class
 github_repo = "https://github.com/tkam8/f5appconnector_guide_screenshots"
 
+# The URL to the official AskF5 guide for Application Connector v1.1.0
+# askf5guide = "https://support.f5.com/kb/en-us/products/app-connector/manuals/product/f5-application-connector-setup-config-1-1-0.html"
+
 # OPTIONAL: Google Analytics
 # googleanalytics_id = 'UA-85156643-4'
 

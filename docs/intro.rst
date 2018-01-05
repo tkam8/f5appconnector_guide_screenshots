@@ -3,7 +3,7 @@ Welcome
 
 Welcome to |classbold| |year|
 
-This guide is intended to *supplement* the official F5 Application Connector |AskF5 guide| 
+This guide is intended to *supplement* the official F5 Application Connector `AskF5 Guide <https://support.f5.com/kb/en-us/products/app-connector/manuals/product/f5-application-connector-setup-config-1-1-0.html>`_ 
 with screenshots for quick deployment. Refer to the official guide for details.
 
 .. NOTE::
