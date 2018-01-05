@@ -19,7 +19,7 @@ To configure the F5® Application Connector Proxy, complete the following tasks.
 
 #. Create the azure_config.json file that contains the Azure credentials gathered earlier. 
 
-{    
+   {    
           "TENANT":"your tenant ID",
           "AZURE_SUBSCRIPTION_ID":"your azure subscription ID",
           "CLIENT_ID":"client or application ID",
@@ -32,8 +32,7 @@ To configure the F5® Application Connector Proxy, complete the following tasks.
 
    |task-2-2|
 
-#. Start the Docker container. This example launches a 
-    Proxy with the user interface accessible on port 8090.
+#. Start the Docker container. This example launches a Proxy with the user interface accessible on port 8090.
 
    ``sudo docker run -d -e adminPort=8090 --restart=always --net=host -e retry=true -e publish=true -e proxyName=<proxy-name> -e user=<user-name> -e passwd=<password> -it -v /home/<user-dir>/cloud_vendors/<vendor-name>:/app/proxy/vendors/<vendor-name> -v /app/proxy/log -v /app/proxy/config f5/acproxy:x.x.x-build.xx``
 
