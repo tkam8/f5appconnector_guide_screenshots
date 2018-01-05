@@ -5,17 +5,17 @@ To configure a WordPress instance in Azure, complete the following tasks.
 
 #. Deploy a WordPress instance from the the Azure Marketplace like below. 
 
-|task-1-1|
+  |task-1-1|
 
-|task-1-2|
+  |task-1-2|
 
-|task-1-3|
+  |task-1-3|
 
-|task-1-4|
+  |task-1-4|
 
-|task-1-5|
+  |task-1-5|
 
-|task-1-6|
+  |task-1-6|
 
 .. |task-1-1| image:: images/task-1-1.png
 .. |task-1-2| image:: images/task-1-2.png

@@ -5,7 +5,7 @@ To configure the F5® Application Connector Proxy, complete the following tasks.
 
 #. Download the f5-acproxy-1.1.1-build.8.tgz package.
 
-|task-2-1|
+  |task-2-1|
 
 #. Use SCP to copy the package to the below directory of the Linux instance.
 
@@ -30,7 +30,7 @@ For example, enter below command from the user prompt:
 
 ``sudo docker load -i <file-name>.tar.gz``
 
-|task-2-2|
+  |task-2-2|
 
 #. Start the Docker container. This example launches a 
     Proxy with the user interface accessible on port 8090.
@@ -40,14 +40,14 @@ For example, enter below command from the user prompt:
 ie. 
 
 ``sudo docker run -d -e adminPort=8090 --restart=always --net=host -e retry=true -e publish=true -e proxyName=acp1 -e user=acpuser -e passwd=acpuser -it -v /home/ubuntu/cloud_vendors/azure:/app/proxy/vendors/azure -v /app/proxy/log -v /app/proxy/config f5/acproxy:1.1.1-build.8``
-
-|task-2-3|
+ 
+  |task-2-3|
 
 #. Confirm the Docker container is running
 
 ``sudo docker ps -a``
 
-|task-2-4|
+  |task-2-4|
 
 .. |task-2-1| image:: images/task-2-1.png
 .. |task-2-2| image:: images/task-2-2.png
