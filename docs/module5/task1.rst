@@ -4,34 +4,34 @@ Add Virtual Server for application access
 #. Create a pool that contains the WordPress server created earlier.
     This node was auto discovered by the Application Connector proxy.
 
-  |task-1-1|
+     |task-1-1|
 
 #. Create a virtual server with an IP in the internal subnet. 
     This virtual server will process application traffic. Add the pool you just created.
 
-  |task-1-2|
+     |task-1-2|
 
-  |task-1-3|
+     |task-1-3|
 
-  |task-1-4|
+     |task-1-4|
 
 
 #. Configure this virtual server IP as a secondary IP on the 
     internal network interface in Azure.
 
-  |task-1-5|
+     |task-1-5|
 
 #. Add the virtual server you just created in the Service Center.
 
-  |task-1-6|
+     |task-1-6|
 
-  |task-1-7|
+     |task-1-7|
 
-  |task-1-8|
+     |task-1-8|
 
 #. Note the iRule that was applied to the virtual server. 
 
-  |task-1-9|
+     |task-1-9|
 
 .. code-block:: tcl
     # This iRule determines if a flow is directed to a public cloud server
