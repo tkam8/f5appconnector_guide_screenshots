@@ -20,11 +20,11 @@ https://github.com/F5Networks/f5-azure-arm-templates/tree/master/supported/ha-av
       The first three addresses in the subnet are reserved for Azure service usage.
 
 
-     |task-1-1|
+   |task-1-1|
 
-     |task-1-2|
+   |task-1-2|
 
-     |task-1-3|
+   |task-1-3|
 
 
 #. Enter in the required configurations, agree to terms and conditions then click **Purchase**.
