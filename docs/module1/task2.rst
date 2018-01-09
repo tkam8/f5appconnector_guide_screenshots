@@ -13,7 +13,7 @@ receive an authentication error in the Application Connector proxy.
     installing Application Connector Proxy, create a new text file named azure_config.json, and add
     these four variables:
 
-     .. code-block:: json
+     .. code-block:: JSON
         :linenos:
 
          {    

@@ -12,19 +12,19 @@ https://github.com/F5Networks/f5-azure-arm-templates/tree/master/supported/ha-av
 #. Click one of the deploy buttons depending on your preferred license type. 
      In this guide we will use the BYOL deploy button and evaluation licenses. 
 
-   .. NOTE::
+     .. NOTE::
       Use the information gathered in the previous step to fill in the tenant id, client id, and 
       service principle secret.
 
-   .. NOTE::
+    .. NOTE::
       The first three addresses in the subnet are reserved for Azure service usage.
 
 
-  |task-1-1|
+     |task-1-1|
 
-  |task-1-2|
+     |task-1-2|
 
-  |task-1-3|
+     |task-1-3|
 
 
 #. Enter in the required configurations, agree to terms and conditions then click **Purchase**.
@@ -44,7 +44,7 @@ https://github.com/F5Networks/f5-azure-arm-templates/tree/master/supported/ha-av
      ``touch /var/config/rest/iapps/enable``
 
    .. NOTE::
-   You may need to refresh the UI to see the iApps LX menus. 
+      You may need to refresh the UI to see the iApps LX menus. 
 
     |task-1-7|
 
