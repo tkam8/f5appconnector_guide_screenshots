@@ -13,11 +13,13 @@ receive an authentication error in the Application Connector proxy.
     installing Application Connector Proxy, create a new text file named azure_config.json, and add
     these four variables:
 
-  ``{    
+.. code-block:: json
+   {    
             "TENANT":"your tenant ID",
             "AZURE_SUBSCRIPTION_ID":"your azure subscription ID",
             "CLIENT_ID":"client or application ID",
             "APPLICATION_SECRET":"client or application secret (service principle)"
-            }``
+            }
+
 
 Your Azure environment should now be ready to deploy Application Connector.
